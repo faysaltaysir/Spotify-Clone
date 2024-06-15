@@ -1,0 +1,361 @@
+body{
+    font-family: "Montserrat", sans-serif;
+    margin: 0;
+    background-color:black;
+    color: #fff;
+    overflow: hidden;
+}
+.main{
+    height: 100vh;
+    display: flex;
+    padding: 0.5rem;
+}
+.sidebar{
+    width: 350px;
+    background-color: #000;
+    margin-right: 0.5rem;
+}
+.main-content{
+    background-color:#121212;
+    border-radius: .75rem;
+    overflow: auto;
+    flex: 1;
+    padding: 0 0.5rem 0 3rem;
+}
+.music-play{
+    background-color: black;
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    bottom: 0;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.nav{
+    height: 110px;
+    display: flex;
+    background-color: #121212;
+    flex-direction: column;
+    border-radius: 1rem;
+    justify-content: center;
+    padding: 0.5rem 0.75rem;
+    line-height: 2.5rem;
+}
+.nav-option{
+    padding: 0.25rem 0.75rem;
+    opacity: 0.7;
+    padding: 0.25rem 0.75rem;
+}
+.nav-option:hover{
+    opacity: 1;
+}
+.nav-option a{
+    font-size: 1rem;
+    margin-left: 1rem;
+}
+.nav-option i{
+    font-size: 1.25rem;
+}
+.library{
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100%;
+    margin-top: .5rem;
+    overflow: auto;
+}
+.library .option{
+    display: flex;
+    line-height: 2.5rem;
+    font-size: 1rem;
+    justify-content: space-between;
+    padding: 0.25rem 0.75rem;
+    align-items: center;
+}
+.lib-option{
+    display: flex;
+    align-items: center;
+}
+.library .option img{
+    width: 1.25rem;
+    height: 1.25rem;
+    opacity: 0.7;
+}
+.option .lib-icons{
+    display: flex;
+}
+.lib-icons i{
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    opacity: 0.7;
+}
+i:hover{
+    opacity: 1;
+}
+.boxes{
+    height: fit-content;
+    background-color: #252525;
+    border-radius: 1rem;
+    margin: 0.5rem 0rem 0.5rem 0rem;
+    padding: 1rem 1rem 1rem 2rem;
+}
+.box-p1{
+    font-size: 1rem;
+    font-weight: 600;
+}
+.box-p2{
+    font-size: 0.87rem;
+    opacity: .9;
+    font-weight: 600;
+}
+.badge{
+    background-color: #fff;
+    height: 2.25rem;
+    width: fit-content;
+    border-radius: 1rem;   
+    border: 0px solid #fff; 
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
+    padding: .25rem 1rem;
+}
+.dark-badge{
+    background-color: #000;
+    color: #fff;
+}
+.circle-btn{
+    font-size: 1rem;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 100%;
+    background-color: #000000B3;
+    color: #fff;
+    border: 3px solid black;
+}
+.sticky-nav {
+    position:sticky;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0;
+    background-color: #121212;
+}
+.sticky-nav{
+    padding: 1rem;
+    margin-left: -1.2rem;
+    opacity: .95;
+    z-index: 10;
+}
+.sticky-nav-profile{
+    width: 25rem;
+    display: flex;
+    justify-content: space-between;
+}
+.sticky-nav-profile i{
+    transform: scale(1.3);
+}
+.sticky-nav-arrow{
+    width: 6rem;
+    display: flex;
+    justify-content: space-around;
+}
+@media (max-width:1000px){
+    #hide{
+        display: none;
+    }
+}
+.card{
+    width: 14rem;
+    height: 19rem;
+    /* background-color: #252525; */
+    border-radius: .5rem;
+    padding: 1rem;
+    margin: .2rem;
+    display: inline-block;
+}
+.card-img{
+    width: 100%;
+    border-radius: .5rem;
+}
+.card .heading{
+    font-weight: 700;
+    font-size: 1rem;
+    line-height: 0.2rem;
+}
+.card .card-about{
+    font-size: .8rem;
+    opacity: 0.7;
+}
+.cards-container{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer{
+    height: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #fff; */
+    /* margin-top:50px; */
+}
+.line{
+    width: 90%;
+    height: 30%;
+    border-top: 1px solid white;
+    opacity: 0.2;
+}
+.card:hover{
+    background-color: #252525;
+}
+.music-play{
+    display: grid;
+    grid-template-rows: repeat(1,1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+    background-color: #000;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    opacity: .7;
+}
+.play-left{
+    display: flex;
+    background-color: #000;
+    align-items: center;
+    padding: 0.2rem;
+}
+.play-left .music{
+    width: 60px;
+    border: 2px solid #fff;
+    border-radius: 0.5rem;
+    margin: .1rem;
+}
+.play-left .title{
+    display: block;
+    font-weight: 600;
+}
+.play-left .author{
+    display: block;
+    font-size: 0.8rem;
+    opacity: 0.7;
+}
+.play-left .btn-plus{
+    display: flex;
+    border: 0px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:flex-start;
+    padding: 0.8rem;
+    background-color: #000;
+
+}
+.play-mid{
+    background-color: #000;
+}
+.play-mid .play-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+}
+.play-up i{
+    padding: 1rem;
+    font-size: 1.3rem;
+}
+.play-up .extra{
+    font-size: 2rem;
+}
+.play-down{
+    display: flex;
+    align-items: center;
+    
+}
+.play-down .progress{
+    width: 80vh;
+    border-top: 3px solid white;
+    margin-left: .9rem;
+    margin-right: .9rem;
+}
+.play-right{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2rem;
+}
+.play-right i{
+    padding: .5rem;
+}
+.play-right .volume{
+    width: 5rem;
+    border-top: 4px solid white;
+}
+.blur{
+    opacity: .6;
+}
+.volume-progress{
+    width: 25%;
+    background-color: #000;
+}
+.play-progress {
+    width: 100%;
+    appearance: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.volume-progress{
+    width: 100%;
+    appearance: none;
+    background-color: red;
+    cursor: pointer;
+}
+.play-progress::-webkit-slider-runnable-track{
+    background-color: #fff;
+    height: .3rem;
+    border-radius: 100px;
+}
+.play-progress::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 0.4rem;
+    background-color: #f00;
+}
+.volume-progress::-webkit-slider-runnable-track{
+    background-color: #fff;
+    height: .3rem;
+    border-radius: 100px;
+    
+}
+.volume-progress::-webkit-slider-thumb{
+    appearance: none;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    position: relative;
+    bottom: 0.4rem;
+    background-color: #f00;
+}
+
+.special{
+    height: 30rem;
+}
+@media(max-width:500px){
+    .sidebar{
+        display: none;
+    }
+}
+
+.none{
+    opacity: 0;
+    width: 150px;
+    height: 30px;
+    transition: .2s ease-out;
+}
