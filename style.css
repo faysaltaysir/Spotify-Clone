@@ -209,6 +209,9 @@ i:hover{
 .card:hover{
     background-color: #252525;
 }
+.card:active{
+    background-color: #002020;
+}
 .music-play{
     display: grid;
     grid-template-rows: repeat(1,1fr);
@@ -358,4 +361,10 @@ i:hover{
     width: 150px;
     height: 30px;
     transition: .2s ease-out;
+}
+.select{
+    background-color: #303030;
+}
+.select:hover{
+    background-color: #404040;
 }

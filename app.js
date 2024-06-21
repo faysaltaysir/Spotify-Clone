@@ -41,33 +41,52 @@ for(song of songs){
 }
 let sgn = "";
 let card = document.querySelectorAll(".card");
+let audioElement = null;
+let playbtn = document.querySelector(".extra");
+
+let musicgif = document.querySelector(".none");
 for(cd of card){
-    cd.addEventListener("click",(e)=>{
-        console.log(e.target.id);
-        sgn = songs[e.target.id].src;
+    cd.addEventListener("click",async (e)=>{
+        // let sel = document.querySelectorAll(".select");
+        // for(e of sel){
+        //     e.classList.remove("select");
+        // }
+        console.log(e.currentTarget); //current target takes on which the event listener
+        sgn = `./${songs[e.target.id].src}`;
         console.log(sgn);
         let playImg = document.querySelector(".music");
         let title = document.querySelector(".title");
         title.innerText = songs[e.target.id].name;
         playImg.src = songs[e.target.id].img;
         console.log(songs[e.target.id].img);
+        if(audioElement){
+            audioElement.pause();
+            // e.currentTarget.classList.remove("select");
+            playbtn.classList.add("fa-circle-play");
+            playbtn.classList.remove("fa-circle-pause");
+            musicgif.style.opacity = 0;
+            // playbtn.style.opacity = 0;
+
+        }
+
+         
+        audioElement = new Audio(sgn);
+        // e.currentTarget.classList.add("select");   
+        
     });
 }
 
 
 
 
-let audioElement = new Audio('./songs/1.mp3');
 let myProgress = document.querySelector(".play-progress");
 
-let musicgif = document.querySelector(".none");
 let count = 0;
-let playbtn = document.querySelector(".extra");
 
-playbtn.addEventListener("click",()=>{
+playbtn.addEventListener("click",async ()=>{
     count++;
     if(audioElement.paused ||audioElement.currentTime<=0){
-        audioElement.play();
+        await audioElement.play();
         playbtn.classList.remove("fa-circle-play");
         playbtn.classList.add("fa-circle-pause");
         musicgif.style.opacity = 1;
