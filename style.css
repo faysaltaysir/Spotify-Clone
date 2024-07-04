@@ -186,9 +186,13 @@ i:hover{
     font-size: .8rem;
     opacity: 0.7;
 }
-.cards-container{
+.card-container{
+    width: inherit;
+    height: fit-content;
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
 }
 
 .footer{
@@ -208,7 +212,12 @@ i:hover{
 }
 .card:hover{
     background-color: #252525;
+    cursor: pointer;
 }
+.card:active{
+    background-color: #002020;
+}
+
 .music-play{
     display: grid;
     grid-template-rows: repeat(1,1fr);
@@ -358,4 +367,27 @@ i:hover{
     width: 150px;
     height: 30px;
     transition: .2s ease-out;
+}
+.select{
+    background-color: #002020;
+}
+.select:hover{
+    background-color: #003030;
+}
+.profile-div{
+    width: 200px;
+    height: 80px;
+    color: wheat;
+    position: absolute;
+    display: flex;
+    background-color: #111111;
+    opacity: 0;
+    right: 30px;
+    top: 80px;
+    justify-content: flex-end;
+    text-align: end;
+}
+.profile:hover{
+    opacity: .95;
+    cursor: pointer;
 }
