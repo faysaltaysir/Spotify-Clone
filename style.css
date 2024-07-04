@@ -374,3 +374,20 @@ i:hover{
 .select:hover{
     background-color: #003030;
 }
+.profile-div{
+    width: 200px;
+    height: 80px;
+    color: wheat;
+    position: absolute;
+    display: flex;
+    background-color: #111111;
+    opacity: 0;
+    right: 30px;
+    top: 80px;
+    justify-content: flex-end;
+    text-align: end;
+}
+.profile:hover{
+    opacity: .95;
+    cursor: pointer;
+}

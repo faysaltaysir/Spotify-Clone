@@ -163,3 +163,15 @@ function progressUpdate(){
         
 }
 
+let profBtn = document.querySelector(".profile");
+let profile = document.querySelector(".profile-div");
+let i = 0;
+profBtn.addEventListener("mouseover",()=>{
+    console.log("profile clicked");
+    profile.style.opacity = .95;
+});
+profBtn.addEventListener("mouseout",()=>{
+    console.log("profile clicked");
+    profile.style.opacity = 0;
+});
+
